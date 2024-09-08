@@ -30,7 +30,6 @@ function Search() {
     } else {
       const fetchedData = await getData(toSearch);
       setData(fetchedData);
-      console.log(fetchedData);
     }
   };
 
