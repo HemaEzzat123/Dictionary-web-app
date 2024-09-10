@@ -33,6 +33,12 @@ function Search() {
     }
   };
 
+  const handleEnter = (key) => {
+    if (key.key === "Enter") {
+      handle();
+    }
+  };
+
   return (
     <>
       <div className="search-container">
@@ -41,6 +47,7 @@ function Search() {
           value={toSearch}
           onChange={(e) => setToSearch(e.target.value)}
           placeholder="Search for a word..."
+          onKeyPress={handleEnter}
         />
         <img src={search} onClick={handle} alt="search-icon" />
       </div>
